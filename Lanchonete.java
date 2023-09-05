@@ -3,13 +3,14 @@ package TrabLanchonete;
 public class Lanchonete {
     private String local;
     private String nome;
-    private Lanche cardapio;
+    public static Lanche [] cardapio;
 
-    public Lanchonete(String local, String nome, Lanche cardapio) {
+    public Lanchonete(String local, String nome, Lanche [] cardapio) {
         this.local = local;
         this.nome = nome;
         this.cardapio = cardapio;
     }
+
 
     public String getLocal() {
         return local;
@@ -27,22 +28,16 @@ public class Lanchonete {
         this.nome = nome;
     }
 
-    public Lanche getCardapio() {
+    public Lanche [] getCardapio() {
         return cardapio;
     }
 
-    public void setCardapio(Lanche cardapio) {
+    public void setCardapio(Lanche[] cardapio) {
         this.cardapio = cardapio;
     }
 
-    public void exibirCardapio() {
-        System.out.println("====== CARDAPIO =====");
-        /*for (int i = 0; i < this.cardapio.length; i++) {
-            System.out.print((i+1) + this.cardapio[i].getNome());
-            System.out.println((i+1) + " - " + this.cardapio[i].getPreco());
-        }*/
-        System.out.print(cardapio.getNome());
-        System.out.println(" - " + cardapio.getPreco());
-        System.out.println("===============");
+    public static void ExibirCardapio() {
+        System.out.println("oii");
+
     }
 }
